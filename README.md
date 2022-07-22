@@ -3,5 +3,8 @@
 Algorithms according to **Grokking Algorithms by Aditya Bhargava**
 
 Algorithms included are:
-- binary search
-- selection sort
+
+- Binary search
+- Selection sort
+- Recursion
+- Devide and Conquer

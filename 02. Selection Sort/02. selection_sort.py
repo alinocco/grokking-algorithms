@@ -6,17 +6,17 @@ def find_max(array, iterations):
     if array == []:
         return None
 
-    max = array[0]
-    max_index = 0
+    min = array[0]
+    min_index = 0
 
     for index, value in enumerate(array):
         iterations += 1
 
-        if value > max:
-            max = value
-            max_index = index
+        if value < min:
+            min = value
+            min_index = index
 
-    return max, max_index, iterations
+    return min, min_index, iterations
 
 
 def selection_sort(array):
@@ -27,8 +27,8 @@ def selection_sort(array):
     for index in range(len(array)):
         iterations += 1
 
-        max, max_index, iterations = find_max(array, iterations)
-        new_array.append(array.pop(max_index))
+        min, min_index, iterations = find_max(array, iterations)
+        new_array.append(array.pop(min_index))
 
     return new_array, iterations
 
