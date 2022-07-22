@@ -8,3 +8,4 @@ Algorithms included are:
 - Selection sort
 - Recursion
 - Devide and Conquer
+- Quick Sort
