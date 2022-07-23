@@ -26,8 +26,6 @@ def breadth_first_search(graph: dict, start, find):
         if person.name not in searched:
             if person.name == find:
                 closest_path = person.current_path
-                print("The closest %s can be found this way %s." %
-                      (find, str(closest_path)))
                 return closest_path
             elif person.name in list(graph.keys()):
                 # Put all the person's friends in search_queue if there are not in person's current_path. If the friend is already mentioned in current_path, we should not add him/her again.
@@ -40,9 +38,19 @@ def breadth_first_search(graph: dict, start, find):
 
 
 graph = {
+    'yaroslav': ['timur'],
     'vadim': ['timur', 'yaroslav', 'dmitrii'],
     'alina': ['vadim', 'aziza', 'daria', 'aizada'],
     'aziza': ['daria', 'artem', 'alina'],
 }
 
-print(breadth_first_search(graph, 'aziza', 'aizada'))
+start = 'yaroslav'
+find = 'timur'
+
+result = breadth_first_search(graph, start, find)
+
+if result is False:
+    print("The closest '%s' can not be found." % find)
+else:
+    print("The closest '%s' can be found this way %s." %
+          (find, result))
