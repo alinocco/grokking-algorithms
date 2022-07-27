@@ -10,3 +10,4 @@ Algorithms according to **Grokking Algorithms by Aditya Bhargava**
 4. Devide and Conquer - Quick Sort - Merge Sort
 5. Hash Table and Hash Function **<sub>without realisation</sub>**
 6. Graphs - Breath-First Search
+7. Directed Graphs - Dijkstra's Algorithm - Bellman-Ford's Algorithm
