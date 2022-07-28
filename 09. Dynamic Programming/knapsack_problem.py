@@ -15,6 +15,9 @@ class ResultCell:
     def __str__(self):
         return str(self.price)
 
+    def copy(self):
+        return ResultCell(self.price, self.weight, self.items)
+
 
 knapsack = 4
 items = [
@@ -37,20 +40,21 @@ for i in range(len(results)):
                 results[i][j].weight = items[i].weight
                 results[i][j].items = [items[i].name]
             else:
-                results[i][j] = results[i-1][j]
-
-        else:
+                results[i][j] = results[i-1][j].copy()
+        elif items[i].weight <= j + 1:
             previous_max_item = results[i-1][j]
-            additional_item = results[i-1][j-items[i].weight]
+            additional_item = results[i-1][j + 1 - items[i].weight] if j + \
+                1 - items[i].weight > 0 else None
 
-            if previous_max_item.price >= items[i].price + additional_item.price:
-                results[i][j] = previous_max_item
-            elif items[i].weight <= j + 1:
+            if additional_item is None or previous_max_item.price >= items[i].price + additional_item.price:
+                results[i][j] = previous_max_item.copy()
+            else:
                 results[i][j].price = items[i].price + \
                     additional_item.price
                 results[i][j].weight = items[i].weight + \
                     additional_item.weight
                 results[i][j].items = [items[i]] + additional_item.items
+
 for i in results:
     for j in i:
         print(j, end=" ")
