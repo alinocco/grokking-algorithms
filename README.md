@@ -27,4 +27,4 @@ Algorithms according to **Grokking Algorithms by Aditya Bhargava**
     - Deffie-Hellman key exchange - Public / Private
     - Linear Programming - maximize something given some constraints
 
-- without realisation
+\*without realisation
