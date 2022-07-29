@@ -11,4 +11,5 @@ Algorithms according to **Grokking Algorithms by Aditya Bhargava**
 5. Hash Table and Hash Function **<sub>without realisation</sub>**
 6. Graphs - Breath-First Search
 7. Directed Graphs - Dijkstra's Algorithm - Bellman-Ford's Algorithm
-8. Greedy Algorithms - Knapstack Problem - Longest Common Substring/Subsequence
+8. Greedy Algorithms - Set Covering Problem - Travelling Salesman **<sub>without realisation</sub>**
+9. Dynamic Programming - Knapstack Problem - Longest Common Substring/Subsequence
